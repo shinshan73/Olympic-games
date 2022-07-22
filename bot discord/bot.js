@@ -1,18 +1,22 @@
 const clientLoader = require('./src/clientLoader');
 const commandLoader = require('./src/commandLoader');
-const MysqlConnector = require('./src/MySqlConnector');
+const database = require('./src/MySqlConnector');
+const dotenv = require('dotenv');
 
+dotenv.config();
 require('colors');
 
 const COMMAND_PREFIX = '!';
-MysqlConnector.connect();
+database.connect();
 
 clientLoader.createClient(['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'])
   .then(async (client) => {
     await commandLoader.load(client);
 
     client.on('messageCreate', async (message) => {
-      // Ne pas tenir compte des messages envoyés par les bots, ou qui ne commencent pas par le préfix
+      
+
+       // Ne pas tenir compte des messages envoyés par les bots, ou qui ne commencent pas par le préfix
       if (message.author.bot || !message.content.startsWith(COMMAND_PREFIX)) return;
 
       // On découpe le message pour récupérer tous les mots
@@ -23,7 +27,7 @@ clientLoader.createClient(['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'])
 
       if (client.commands.has(commandName)) {
         // La commande existe, on la lance
-        client.commands.get(commandName).run(client, message, arguments);
+        client.commands.get(commandName).run(client, message, arguments, database);
       } else {
         // La commande n'existe pas, on prévient l'utilisateur
         await message.delete();
