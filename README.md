@@ -7,7 +7,9 @@
 3) Réaliser une vidéo de présentation du projet + explication du code.
 ```
 
-### The folder projet bot discord
+### Dossier du projet bot discord
 
-[Bot discord](https://github.com/shinshan73/olympic-games/tree/main/bot%20discord).
+Ouvrir [Bot discord](https://github.com/shinshan73/olympic-games/tree/main/bot%20discord).
+
+
 
