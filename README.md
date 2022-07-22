@@ -14,6 +14,6 @@ Ouvrir [Bot discord](https://github.com/shinshan73/olympic-games/tree/main/bot%2
 
 ### Vidéo de présentation & explication du code
 
-Lire la vidéo [Présentation & Explication]().
+Lire la vidéo [Présentation & Explication](https://www.youtube.com/watch?v=4OLdJ4Mwmyo).
 
 
