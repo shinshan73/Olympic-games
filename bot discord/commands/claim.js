@@ -8,7 +8,7 @@ const Discord = require('discord.js')
 
 module.exports.run = async (client, message, arguments, database)=> {
 
-    const [query] = await database.executeQuery(`SELECT * FROM sportif INNER JOIN sport ON sportif.sport_id = sport.id ORDER BY classement`)
+    const [query] = await database.executeQuery(`SELECT * FROM sportif INNER JOIN sport ON sportif.sport_id = sport.id ORDER BY classement LIMIT 3`)
     message.channel.send(`Résultat du podium = classement : ${query.classement} - Joueur : ${query.sportif_name}  Sport : ${query.sport_name}`)
 }
 
