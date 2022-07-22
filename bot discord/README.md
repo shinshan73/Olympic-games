@@ -9,4 +9,4 @@ npm install
 node bot.js
 ```
 ### Vidéo de présentation du projet + explication du code
-Lire la vidéo [Présentation & Explication]().
+Lire la vidéo [Présentation & Explication](https://www.youtube.com/watch?v=4OLdJ4Mwmyo).
