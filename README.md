@@ -9,7 +9,7 @@
 
 ### Dossier du projet bot discord
 
-Ouvrir [Bot discord](https://github.com/shinshan73/olympic-games/tree/main/bot%20discord).
+Ouvrir -> [Bot discord](https://github.com/shinshan73/olympic-games/tree/main/bot%20discord).
 
 
 ## Vidéo de présentation & explication du code
